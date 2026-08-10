@@ -22,6 +22,12 @@ vector<vector<int>> threeSum(vector<int>& arr) {
                 result.push_back({arr[i],arr[l],arr[r]});
                 l++;
                 r--;
+                while(l<r && arr[l]==arr[l-1]){
+                    l++;
+                }
+                while(l<r && arr[r]==arr[r+1]){
+                    r--;
+                }
             }
         }
     }
